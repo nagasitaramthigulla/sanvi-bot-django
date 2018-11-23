@@ -1,0 +1,3 @@
+retrieve fb bot user id from app
+
+https://graph.facebook.com/v2.6/2174627512777463/ids_for_pages?access_token=193835821551887|ihGzxjy3tcXs96WjX3oqxQ_RHlU&appsecret_proof=ba064e3fd727a725f81bb291ba2b0f81

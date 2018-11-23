@@ -3,8 +3,22 @@ from pprint import pprint
 from bot import nlpluisai
 import wikipedia
 from word2number.w2n import word_to_num
+from bot.models import MessengerUser
 
 PAGE_ACCESS_TOKEN = "EAACwSutJ0Q8BAC42dpG0pfwrThBVFKzehsxLGNd7RsewBdA5TheMOZCfW6HtXQxrxaGPa8zdLHtZAvuWdLz7mvTRx926vf1ZB0uXcp2iz2O12NHVRdNlb1GsZANDJ2uBW88BqMVtCQxBwN4lY67jdPFh1Ce1PSdE4EhZAU9zE7mTOznA3psN5"
+
+
+def check_new_user(fbid):
+    try:
+        if MessengerUser.objects.filter(uid=fbid).count() == 0:
+            user_details_url = "https://graph.facebook.com/v2.6/%s" % fbid
+            user_details_params = {'fields': 'first_name,last_name,email', 'access_token': PAGE_ACCESS_TOKEN}
+            user_details = requests.get(user_details_url, user_details_params).json()
+            user_details['uid'] = fbid
+            user = MessengerUser(**user_details)
+            user.save()
+    except Exception as es:
+        pass
 
 
 def send_message(fbid, message):
@@ -18,12 +32,9 @@ def send_message(fbid, message):
 def greeting_reply(**kwargs) -> str:
     reply: str = random.choice(['hi', 'hello', 'hey', 'namaste'])
     if 'fbid' in kwargs:
-        fbid = kwargs['fbid']
-        user_details_url = "https://graph.facebook.com/v2.6/%s" % fbid
-        user_details_params = {'fields': 'first_name', 'access_token': PAGE_ACCESS_TOKEN}
-        user_details = requests.get(user_details_url, user_details_params).json()
-        if 'first_name' in user_details:
-            reply += " " + user_details['first_name']
+        user = MessengerUser.objects.get(uid=kwargs['fbid'])
+        if user is not None:
+            reply += " " + user.first_name
     return reply
 
 

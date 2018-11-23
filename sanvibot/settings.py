@@ -26,9 +26,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-SOCIAL_AUTH_FACEBOOK_KEY : str = '193835821551887'
+SOCIAL_AUTH_FACEBOOK_KEY: str = '193835821551887'
 
-SOCIAL_AUTH_FACEBOOK_SECRET : str = 'ba064e3fd727a725f81bb291ba2b0f81'
+SOCIAL_AUTH_FACEBOOK_SECRET: str = 'ba064e3fd727a725f81bb291ba2b0f81'
 
 # Application definition
 
@@ -85,9 +85,20 @@ WSGI_APPLICATION = 'sanvibot.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'sql_server.pyodbc',
+        'NAME': 'sanvi',
+        'HOST': 'nagasitaram.database.windows.net',
+        'PASSWORD': 'Qwer1234',
+        'USER': 'nagasitaram@nagasitaram',
+        'PORT':'1433',
+        'OPTIONS': {
+            'driver': 'ODBC Driver 13 for SQL Server',
+        }
     }
 }
 
@@ -133,8 +144,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
-  'locale': 'ru_RU',
-  'fields': 'id, name, email, age_range'
+    'locale': 'en_US',
+    'fields': 'id, name, email, age_range'
 }
 
 STATIC_URL = '/static/'
