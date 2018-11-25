@@ -161,9 +161,9 @@ SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
     'fields': 'id, name, email, age_range'
 }
 
-STATICFILES_DIRS = [
-        os.path.join(ANGULAR_APP_DIR),
-    ]
+# STATICFILES_DIRS = [
+#         os.path.join(ANGULAR_APP_DIR),
+#     ]
 
 STATIC_URL = '/static/'
 STATIC_ROOT = 'static'
