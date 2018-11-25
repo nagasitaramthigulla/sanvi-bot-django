@@ -26,7 +26,7 @@ urlpatterns = [
     # url(r'^$', serve,kwargs={'path': 'index.html'}),
     # url(r'^(?!/?static/)(?!/?media/)(?P<path>.*\..*)$',
     #     RedirectView.as_view(url='/static/%(path)s', permanent=False)),
-    url(r'^names/',sample),
+    #url(r'^names/',sample),
     url(r'^$', home, name='home'),
     url(r'^login/$', auth_views.LoginView.as_view(template_name='registration/login.html'), name='login'),
     url(r'^logout/$', auth_views.LogoutView.as_view(), name='logout'),
