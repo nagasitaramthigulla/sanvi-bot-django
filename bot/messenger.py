@@ -3,104 +3,109 @@ from pprint import pprint
 from bot import nlpluisai
 import wikipedia
 from word2number.w2n import word_to_num
-from bot.models import MessengerUser
+from bot.models import *
+from datetime import datetime
+from .intents_replies import intents,none_reply
 
 PAGE_ACCESS_TOKEN = "EAACwSutJ0Q8BAC42dpG0pfwrThBVFKzehsxLGNd7RsewBdA5TheMOZCfW6HtXQxrxaGPa8zdLHtZAvuWdLz7mvTRx926vf1ZB0uXcp2iz2O12NHVRdNlb1GsZANDJ2uBW88BqMVtCQxBwN4lY67jdPFh1Ce1PSdE4EhZAU9zE7mTOznA3psN5"
 
 
-def check_new_user(fbid):
+def get_user(fbid):
     try:
-        if MessengerUser.objects.filter(uid=fbid).count() == 0:
+        if MessengerUser.objects.filter(id=fbid).count() == 0:
             user_details_url = "https://graph.facebook.com/v2.6/%s" % fbid
-            user_details_params = {'fields': 'first_name,last_name,email', 'access_token': PAGE_ACCESS_TOKEN}
+            user_details_params = {'fields': 'id,first_name,last_name,email', 'access_token': PAGE_ACCESS_TOKEN}
             user_details = requests.get(user_details_url, user_details_params).json()
-            user_details['uid'] = fbid
             user = MessengerUser(**user_details)
             user.save()
+        else:
+            user = MessengerUser.objects.get(id=fbid)
+        return user
     except Exception as es:
+        return None
         pass
 
 
-def send_message(fbid, message):
+def send_message(fbid, text,**kwargs):
     post_message_url = 'https://graph.facebook.com/v2.6/me/messages?access_token=%s' % PAGE_ACCESS_TOKEN
-    response_msg = json.dumps({"recipient": {"id": fbid}, "message": {"text": message}})
+    response_msg = json.dumps({"recipient": {"id": fbid}, "message": {"text": text}})
     status = requests.post(post_message_url, headers={"Content-Type": "application/json"}, data=response_msg)
     pprint(status.json())
     return
 
 
-def greeting_reply(**kwargs) -> str:
-    reply: str = random.choice(['hi', 'hello', 'hey', 'namaste'])
-    if 'fbid' in kwargs:
-        user = MessengerUser.objects.get(uid=kwargs['fbid'])
-        if user is not None:
-            reply += " " + user.first_name
-    return reply
+def send_url(fbid, text, url,**kwargs):
+    post_message_url = 'https://graph.facebook.com/v2.6/me/messages?access_token=%s' % PAGE_ACCESS_TOKEN
+    response_msg = json.dumps({
+        'recipient': {
+            "id": fbid
+        }, 'message': {
+            "attachment": {
+                "type": "template",
+                "payload": {
+                    "template_type": "button",
+                    "text": text,
+                    "buttons": [
+                        {
+                            "type": "web_url",
+                            "url": url,
+                            "title": "click here",
+                            "webview_height_ratio": "full"
+                        }
+                    ]
+                }
+            }
+        }
+    })
+    status = requests.post(post_message_url, headers={"Content-Type": "application/json"}, data=response_msg)
+    pprint(status.json())
+    return
 
 
-def wiki_reply(**kwargs) -> str:
-    reply: str = ""
-    try:
-        if 'searchkey' in kwargs:
-            reply: str = wikipedia.summary(kwargs['searchkey'], sentences=2)
-    except wikipedia.exceptions.PageError as ex:
-        try:
-            reply: str = wikipedia.summary(wikipedia.search(kwargs['searchkey'], results=1)[0], sentences=2)
-        except Exception:
-            reply = "did not find any results regarding " + kwargs['searchkey']
-        pass
-    except wikipedia.exceptions.DisambiguationError as dex:
-        options = dex.options
-        reply = "did you mean?\n" + "\n".join(random.sample(options, 5))
-    return reply
+def quick_reply(fbid, text, options,**kwargs):
+    quick_replies = []
+    for option in options:
+        quick_replies.append({
+                    "content_type": "text",
+                    "title": option,
+                    "payload":"<POSTBACK_PAYLOAD>",
+                })
+    post_message_url = 'https://graph.facebook.com/v2.6/me/messages?access_token=%s' % PAGE_ACCESS_TOKEN
+    response_msg = json.dumps({
+        'recipient': {
+            "id": fbid
+        }, 'message': {
+            "text": text,
+            "quick_replies": quick_replies
+        }
+    })
+    status = requests.post(post_message_url, headers={"Content-Type": "application/json"}, data=response_msg)
+    pprint(status.json())
+    return
 
 
-def work_reply(**kwargs) -> str:
-    reply: str = ""
-    try:
-        if 'time' in kwargs:
-            time: int = word_to_num(kwargs['time'])
-        else:
-            time: int = 1
-        if 'project' in kwargs:
-            project: str = kwargs['project']
-        else:
-            project: str = "unproductive"
-        reply += "you have worked on {project} for {time} hours".format(project=project, time=time)
-        pass
-    except Exception as ex:
-        reply: str = ""
-        pass
-    return reply
 
-
-def none_reply(**kwargs) -> str:
-    return random.choice(['i did not get that', 'i am unable to catch your words'])
-
-
-intents = {'greeting': greeting_reply, 'wiki': wiki_reply, 'work': work_reply, 'None': none_reply}
-
+reply_types = {"send_message": send_message,"send_url":send_url,"quick_reply":quick_reply}
 
 def process_message(fbid, message: str):
-    # user_details_url = "https://graph.facebook.com/v2.6/%s" % fbid
-    # user_details_params = {'fields': 'first_name', 'access_token': PAGE_ACCESS_TOKEN}
-    # user_details = requests.get(user_details_url, user_details_params).json()
-    # if 'first_name' not in user_details:
-    #     return
-    # message = user_details['first_name'] + " : " + message
-    # send_message(fbid, message)
     pprint(fbid)
     requests.post("https://graph.facebook.com/v2.6/me/messages?access_token=" + PAGE_ACCESS_TOKEN,
-                  headers={"Content-Type": "application/json"}, data=json.dumps({
-            "recipient": {
-                "id": fbid
-            },
-            "sender_action": "typing_on"
-        }))
+                  headers={"Content-Type": "application/json"},
+                  data=json.dumps({
+                      "recipient": {
+                          "id": fbid
+                      },
+                      "sender_action": "typing_on"
+                  }))
+
+    user = get_user(fbid)
+
     intent_dict = nlpluisai.get_intent(message)
     intent = intent_dict['topScoringIntent']['intent'] if intent_dict['topScoringIntent']['score'] > 0.5 else 'None'
-    arguments = {'fbid': fbid}
+
+    arguments = {'user': user, 'fbid': fbid}
     builtin = dict()
+
     for entity in intent_dict['entities']:
         if 'builtin' in entity['type']:
             type = entity['type'].split('.')[-1]
@@ -108,13 +113,10 @@ def process_message(fbid, message: str):
             builtin[type][entity['entity']] = entity['resolution']['value']
             continue
         arguments[entity['type']] = entity['entity']
-    message: str = intents[intent](**arguments)
-    send_message(fbid, message)
-    requests.post("https://graph.facebook.com/v2.6/me/messages?access_token=" + PAGE_ACCESS_TOKEN,
-                  headers={"Content-Type": "application/json"}, data=json.dumps({
-            "recipient": {
-                "id": fbid
-            },
-            "sender_action": "typing_off"
-        }))
-    pass
+
+    intent_reply = intents.get(intent, none_reply)
+    message_dict = intent_reply(**arguments)
+
+    reply_type = reply_types[message_dict.pop('type','send_message')]
+
+    reply_type(fbid,**message_dict)

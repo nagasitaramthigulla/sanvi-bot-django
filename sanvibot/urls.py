@@ -15,15 +15,23 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from bot.views import FacebookRequest,home
+from bot.views import *
 from django.conf.urls import url, include
 from django.contrib.auth import views as auth_views
+from django.views.generic import RedirectView
+from django.contrib.staticfiles.views import serve
+
 
 urlpatterns = [
+    # url(r'^$', serve,kwargs={'path': 'index.html'}),
+    # url(r'^(?!/?static/)(?!/?media/)(?P<path>.*\..*)$',
+    #     RedirectView.as_view(url='/static/%(path)s', permanent=False)),
+    url(r'^names/',sample),
     url(r'^$', home, name='home'),
     url(r'^login/$', auth_views.LoginView.as_view(template_name='registration/login.html'), name='login'),
     url(r'^logout/$', auth_views.LogoutView.as_view(), name='logout'),
     url(r'^oauth/', include('social_django.urls', namespace='social')),  # <--
     path('admin/', admin.site.urls),
     path('messages/',FacebookRequest.as_view()),
+    path('user/<pk>',UserStats.as_view()),
 ]

@@ -42,7 +42,20 @@ INSTALLED_APPS = [
     'bot',
     'social_django',
     "sslserver",
+    'corsheaders',
+    "rest_framework",
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer',
+    )
+}
+
+CORS_ORIGIN_ALLOW_ALL = True
+
+ANGULAR_APP_DIR = os.path.join(BASE_DIR, 'frontend/dist')
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -52,7 +65,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
+    'corsheaders.middleware.CorsMiddleware',
     'social_django.middleware.SocialAuthExceptionMiddleware',  # <--
 ]
 
@@ -133,7 +146,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
@@ -148,7 +161,12 @@ SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
     'fields': 'id, name, email, age_range'
 }
 
+STATICFILES_DIRS = [
+        os.path.join(ANGULAR_APP_DIR),
+    ]
+
 STATIC_URL = '/static/'
+STATIC_ROOT = 'static'
 
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
