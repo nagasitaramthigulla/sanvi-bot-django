@@ -133,7 +133,7 @@ def checkout_reply(user: MessengerUser = None, **kwargs) -> dict:
 
 
 def stats_reply(user: MessengerUser = None, **kwargs) -> dict:
-    return {"type": "send_url", "text": "these are your stats", "url": "localhost:4200/metrics"}
+    return {"type": "send_url", "text": "these are your stats", "url": "http://saanvidashboard.azurewebsites.net/metrics?uid={uid}".format(uid=user.id)}
 
 
 def none_reply(**kwargs) -> dict:

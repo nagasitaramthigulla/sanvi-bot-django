@@ -12,6 +12,7 @@
       <change beforePath="$PROJECT_DIR$/SaanviDashboard/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/SaanviDashboard/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SaanviDashboard/src/app/code.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SaanviDashboard/src/app/services/getdata.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SaanviDashboard/src/app/services/getdata.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/intents_replies.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/intents_replies.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,12 +40,6 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="sanvi@nagasitaram.database.windows.net" type="feb32156:DbDataSourceImpl" />
         <item name="sanvi: database" type="ccb7ac2a:MsImplModel$Database" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="sanvi@nagasitaram.database.windows.net" type="feb32156:DbDataSourceImpl" />
-        <item name="sanvi: database" type="ccb7ac2a:MsImplModel$Database" />
-        <item name="dbo: schema" type="2865ee2e:MsImplModel$Schema" />
       </path>
     </expand>
     <select />
@@ -118,11 +113,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bot/intents_replies.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
+            <state relative-caret-position="101">
+              <caret line="135" column="99" selection-start-line="135" selection-start-column="99" selection-end-line="135" selection-end-column="99" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -130,7 +125,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/push.bat">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
@@ -205,10 +200,10 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/SaanviDashboard/src/app/services/getdata.service.ts" />
         <option value="$PROJECT_DIR$/bot/views.py" />
-        <option value="$PROJECT_DIR$/bot/intents_replies.py" />
         <option value="$PROJECT_DIR$/push.bat" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/bot/models.py" />
+        <option value="$PROJECT_DIR$/bot/intents_replies.py" />
       </list>
     </option>
   </component>
@@ -355,12 +350,12 @@
       <updated>1542599110477</updated>
       <workItem from="1543035317329" duration="233000" />
       <workItem from="1543036096250" duration="61487000" />
-      <workItem from="1543281862955" duration="24700000" />
+      <workItem from="1543281862955" duration="25119000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86420000" />
+    <option name="totallyTimeSpent" value="86839000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -771,16 +766,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bot/intents_replies.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -805,13 +790,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://42fe0d88-4e6f-4ce5-b952-dde11b164844/database/sanvi/schema/dbo/table/bot_checkinstore">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bot/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -823,6 +801,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://42fe0d88-4e6f-4ce5-b952-dde11b164844/database/sanvi/schema/dbo/table/bot_checkinstore">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/intents_replies.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="135" column="99" selection-start-line="135" selection-start-column="99" selection-end-line="135" selection-end-column="99" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
