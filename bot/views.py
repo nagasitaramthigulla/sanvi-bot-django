@@ -34,6 +34,7 @@ class FacebookRequest(View):
     def dispatch(self, request, *args, **kwargs):
         return View.dispatch(self, request, *args, **kwargs)
 
+    #receives messages from facebook user
     def post(self, request: HttpRequest, *args, **kwargs):
         params = request.POST
         print(params)

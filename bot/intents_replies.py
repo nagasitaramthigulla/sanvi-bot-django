@@ -11,7 +11,7 @@ def greeting_reply(user=None, **kwargs) -> dict:
     reply: str = random.choice(['Hi', 'Hello', 'Hey', 'Namaste'])
     if user is not None:
         reply += " " + user.first_name
-    return {"type":"send_message","text":reply}
+    return {"type": "send_message", "text": reply}
 
 
 def wiki_reply(**kwargs) -> dict:
@@ -30,9 +30,9 @@ def wiki_reply(**kwargs) -> dict:
     except wikipedia.exceptions.DisambiguationError as dex:
         options = dex.options
         reply = "did you mean?\n" + "\n"
-        options = ["wiki "+option for option in random.sample(options, 5)]
+        options = ["wiki " + option for option in random.sample(options, 5)]
         reply_type = "quick_reply"
-    return {"type":reply_type,"text":reply,"options":options}
+    return {"type": reply_type, "text": reply, "options": options}
 
 
 def checkin_reply(user: MessengerUser = None, **kwargs) -> dict:
@@ -47,7 +47,7 @@ def checkin_reply(user: MessengerUser = None, **kwargs) -> dict:
             if Checkin.objects.filter(activity__uid=user.id).count() != 0:
                 reply = "you have already checked into {pn} at {t}"
                 checkin = Checkin.objects.get(activity__uid=user.id)
-            else:
+            else:# projectname is given
                 if UserActivity.objects.filter(uid=user, activity_name=project_name).count() != 0:
                     reply = "checking you into {pn} at {t}"
                     user_context = json.loads(user.context)
@@ -65,7 +65,7 @@ def checkin_reply(user: MessengerUser = None, **kwargs) -> dict:
                     user.context = json.dumps(user_context)
                     user.save()
                     reply += "\nis {pn} productive or not?"
-                    options = ["yes","no"]
+                    options = ["yes", "no"]
                     reply_type = "quick_reply"
                 checkin = Checkin.objects.create(activity=activity)
                 checkin.save()
@@ -77,7 +77,7 @@ def checkin_reply(user: MessengerUser = None, **kwargs) -> dict:
     except Exception as ex:
         reply = "unable to check you in"
         pass
-    return {"type":reply_type,"text":reply,"options":options}
+    return {"type": reply_type, "text": reply, "options": options}
 
 
 def productivity_reply(user: MessengerUser = None, **kwargs) -> dict:
@@ -102,7 +102,8 @@ def productivity_reply(user: MessengerUser = None, **kwargs) -> dict:
             if activity != None:
                 activity.is_productive = status
                 activity.save()
-            return {"type":"send_message","text":"updated {pn} to {status}".format(pn=project_name, status="productive" if status else "unproductive")}
+            return {"type": "send_message", "text": "updated {pn} to {status}".format(pn=project_name,
+                                                                                      status="productive" if status else "unproductive")}
     except Exception as ex:
         return none_reply()
 
@@ -128,15 +129,15 @@ def checkout_reply(user: MessengerUser = None, **kwargs) -> dict:
                 reply = "you have not checked into anything"
     except Exception as ex:
         reply = "unable process your check out request"
-    return {"type":"send_message","text":reply}
+    return {"type": "send_message", "text": reply}
 
 
-def stats_reply(user:MessengerUser=None,**kwargs) -> dict:
-    return {"type": "send_url", "text":"these are your stats", "url": "https://mystats.com/"+user.id}
+def stats_reply(user: MessengerUser = None, **kwargs) -> dict:
+    return {"type": "send_url", "text": "these are your stats", "url": "localhost:4200/metrics"}
 
 
 def none_reply(**kwargs) -> dict:
-    return {"type":"send_message","text":random.choice(['i did not get that', 'i am unable to catch your words'])}
+    return {"type": "send_message", "text": random.choice(['i did not get that', 'i am unable to catch your words'])}
 
 
 intents = {'greeting': greeting_reply, 'wiki': wiki_reply, 'None': none_reply, 'checkin': checkin_reply,

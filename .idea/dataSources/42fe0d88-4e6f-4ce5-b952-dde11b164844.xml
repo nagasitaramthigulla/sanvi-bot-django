@@ -46,7 +46,7 @@
     </schema>
     <schema id="14" parent="3" name="dbo">
       <ObjectId>1</ObjectId>
-      <IntrospectionTimestamp>2018-11-25.09:18:55.643</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2018-11-29.19:02:56.190</IntrospectionTimestamp>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -94,7 +94,7 @@
     <table id="24" parent="14" name="bot_checkinstore">
       <ObjectId>1650104919</ObjectId>
       <CreatedTimestamp>2018-11-24.23:02:16.727</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-24.23:02:17.107</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-11-29.19:02:13.187</ModifiedTimestamp>
     </table>
     <table id="25" parent="14" name="bot_messengeruser">
       <ObjectId>1682105033</ObjectId>
@@ -624,7 +624,7 @@ permission_id</ColNames>
     </column>
     <column id="108" parent="24" name="total_time">
       <Position>4</Position>
-      <DataType>int|0s</DataType>
+      <DataType>float|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="109" parent="24" name="activity_id">

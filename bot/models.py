@@ -32,11 +32,12 @@ class CheckinStore(models.Model):
     activity = models.ForeignKey(UserActivity, on_delete=models.CASCADE)
     check_in_time = models.DateTimeField(blank=False)
     check_out_time = models.DateTimeField(auto_now_add=True)
-    total_time = models.IntegerField()
+    total_time = models.FloatField()
 
     def save(self, *args, **kwargs):
         import pytz
-        self.check_out_time = pytz.timezone("Asia/Kolkata").localize(datetime.now())
+        if self.check_out_time == None:
+            self.check_out_time = pytz.timezone("Asia/Kolkata").localize(datetime.now())
         time_diff: timedelta = self.check_out_time - self.check_in_time
-        self.total_time = time_diff.total_seconds() // 3600
+        self.total_time = time_diff.total_seconds() / 3600
         super(CheckinStore, self).save(*args, **kwargs)
