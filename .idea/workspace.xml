@@ -12,7 +12,6 @@
       <change beforePath="$PROJECT_DIR$/SaanviDashboard/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/SaanviDashboard/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SaanviDashboard/src/app/code.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SaanviDashboard/src/app/services/getdata.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SaanviDashboard/src/app/services/getdata.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,10 +75,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bot/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
+            <state relative-caret-position="135">
               <caret line="41" column="67" selection-start-line="41" selection-start-column="67" selection-end-line="41" selection-end-column="67" />
             </state>
           </provider>
@@ -131,7 +130,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/push.bat">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
@@ -356,12 +355,12 @@
       <updated>1542599110477</updated>
       <workItem from="1543035317329" duration="233000" />
       <workItem from="1543036096250" duration="61487000" />
-      <workItem from="1543281862955" duration="24683000" />
+      <workItem from="1543281862955" duration="24700000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86403000" />
+    <option name="totallyTimeSpent" value="86420000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -384,7 +383,7 @@
       <window_info anchor="bottom" id="Database Console" order="1" weight="0.6628478" />
       <window_info anchor="bottom" id="Inspection Results" order="2" weight="0.3289689" />
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" weight="0.3289689" />
-      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.49924356" weight="0.4729951" />
+      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.49924356" visible="true" weight="0.4729951" />
       <window_info anchor="bottom" id="Version Control" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5015129" side_tool="true" weight="0.32242227" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
@@ -394,7 +393,7 @@
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="13" weight="0.3289689" />
-      <window_info anchor="bottom" id="Python Console" order="14" visible="true" weight="0.33387887" />
+      <window_info anchor="bottom" id="Python Console" order="14" weight="0.33387887" />
       <window_info anchor="bottom" id="Run" order="15" sideWeight="0.49848714" weight="0.3764321" />
       <window_info anchor="right" id="R Graphics" order="0" />
       <window_info anchor="right" id="R Packages" order="1" />
@@ -785,13 +784,6 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/push.bat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sanvibot/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
@@ -822,8 +814,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bot/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
+        <state relative-caret-position="135">
           <caret line="41" column="67" selection-start-line="41" selection-start-column="67" selection-end-line="41" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/push.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
