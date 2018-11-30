@@ -12,7 +12,6 @@
       <change beforePath="$PROJECT_DIR$/SaanviDashboard/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/SaanviDashboard/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SaanviDashboard/src/app/code.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SaanviDashboard/src/app/services/getdata.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SaanviDashboard/src/app/services/getdata.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/intents_replies.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/intents_replies.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -107,19 +106,23 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bot/migrations/0002_auto_20181129_1901.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-102" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bot/intents_replies.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="101">
               <caret line="135" column="99" selection-start-line="135" selection-start-column="99" selection-end-line="135" selection-end-column="99" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SaanviDashboard/src/app/user-metrics/user-metrics.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-816">
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -171,7 +174,7 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/SaanviDashboard" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -228,17 +231,28 @@
             <path>
               <item name="sanvibot" type="b2602c69:ProjectViewProjectNode" />
               <item name="sanvibot" type="462c0819:PsiDirectoryNode" />
-              <item name=".ebextensions" type="462c0819:PsiDirectoryNode" />
+              <item name="SaanviDashboard" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sanvibot" type="b2602c69:ProjectViewProjectNode" />
               <item name="sanvibot" type="462c0819:PsiDirectoryNode" />
-              <item name="bot" type="462c0819:PsiDirectoryNode" />
+              <item name="SaanviDashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sanvibot" type="b2602c69:ProjectViewProjectNode" />
               <item name="sanvibot" type="462c0819:PsiDirectoryNode" />
+              <item name="SaanviDashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sanvibot" type="b2602c69:ProjectViewProjectNode" />
               <item name="sanvibot" type="462c0819:PsiDirectoryNode" />
+              <item name="SaanviDashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="user-metrics" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -350,12 +364,12 @@
       <updated>1542599110477</updated>
       <workItem from="1543035317329" duration="233000" />
       <workItem from="1543036096250" duration="61487000" />
-      <workItem from="1543281862955" duration="25119000" />
+      <workItem from="1543281862955" duration="26191000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86839000" />
+    <option name="totallyTimeSpent" value="87911000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -368,17 +382,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.1860817" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.1860817" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info id="Database" order="3" weight="0.20726173" />
       <window_info anchor="bottom" id="TypeScript" order="0" weight="0.3289689" />
       <window_info anchor="bottom" id="Database Console" order="1" weight="0.6628478" />
       <window_info anchor="bottom" id="Inspection Results" order="2" weight="0.3289689" />
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" weight="0.3289689" />
-      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.49924356" visible="true" weight="0.4729951" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="4" sideWeight="0.49924356" visible="true" weight="0.36824876" />
       <window_info anchor="bottom" id="Version Control" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5015129" side_tool="true" weight="0.32242227" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
@@ -652,15 +665,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SaanviDashboard/src/app/user-metrics/user-metrics.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bot/messenger.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-355">
@@ -817,6 +821,15 @@
           <caret line="135" column="99" selection-start-line="135" selection-start-column="99" selection-end-line="135" selection-end-column="99" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SaanviDashboard/src/app/user-metrics/user-metrics.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-816">
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
