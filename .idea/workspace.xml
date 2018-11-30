@@ -8,11 +8,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0477967-eac6-4969-aafa-95e8a14ab4cc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sanvibot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sanvibot.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/42fe0d88-4e6f-4ce5-b952-dde11b164844.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/42fe0d88-4e6f-4ce5-b952-dde11b164844/storage_v2/_src_/database/sanvi.k1KCBg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/42fe0d88-4e6f-4ce5-b952-dde11b164844/storage_v2/_src_/database/sanvi.k1KCBg/schema/dbo.sYMBAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Nagasitaram.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sanvibot.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SaanviDashboard" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bot/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/push.bat" beforeDir="false" afterPath="$PROJECT_DIR$/push.bat" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,20 +74,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bot/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://42fe0d88-4e6f-4ce5-b952-dde11b164844/database/sanvi/schema/dbo/table/bot_checkinstore">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+            <state relative-caret-position="267">
+              <caret line="40" column="64" lean-forward="true" selection-start-line="40" selection-start-column="64" selection-end-line="40" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -124,11 +126,20 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/push.bat">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
               <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="56">
+              <caret line="45" column="15" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -213,11 +224,11 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/SaanviDashboard/src/app/services/getdata.service.ts" />
         <option value="$PROJECT_DIR$/bot/views.py" />
-        <option value="$PROJECT_DIR$/bot/models.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/bot/testdata.py" />
         <option value="$PROJECT_DIR$/bot/intents_replies.py" />
         <option value="$PROJECT_DIR$/push.bat" />
+        <option value="$PROJECT_DIR$/bot/models.py" />
       </list>
     </option>
   </component>
@@ -319,7 +330,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="sanvibot.settings" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\nthigull\.virtualenvs\botenv\Scripts\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\Nagasitaram\Envs\myenv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -359,12 +370,12 @@
       <workItem from="1543036096250" duration="61487000" />
       <workItem from="1543281862955" duration="27700000" />
       <workItem from="1543557525267" duration="10613000" />
-      <workItem from="1543587742348" duration="99000" />
+      <workItem from="1543587742348" duration="379000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100132000" />
+    <option name="totallyTimeSpent" value="100412000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -380,14 +391,14 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.500813" side_tool="true" weight="0.1881663" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.499187" visible="true" weight="0.19062027" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.499187" visible="true" weight="0.19062027" />
       <window_info id="Structure" order="2" sideWeight="0.500813" side_tool="true" weight="0.1881663" />
       <window_info id="Database" order="3" weight="0.20682302" />
       <window_info anchor="bottom" id="TypeScript" order="0" weight="0.3289689" />
       <window_info anchor="bottom" id="Database Console" order="1" weight="0.6619718" />
       <window_info anchor="bottom" id="Inspection Results" order="2" weight="0.3289689" />
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" weight="0.3289689" />
-      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.49924356" weight="0.3672806" />
+      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.49924356" weight="0.3666121" />
       <window_info anchor="bottom" id="Version Control" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5010661" side_tool="true" weight="0.3336945" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
@@ -398,7 +409,7 @@
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="13" weight="0.3289689" />
       <window_info anchor="bottom" id="Python Console" order="14" sideWeight="0.4989339" weight="0.3336945" />
-      <window_info anchor="bottom" id="Run" order="15" sideWeight="0.49848714" weight="0.28494042" />
+      <window_info active="true" anchor="bottom" id="Run" order="15" sideWeight="0.49848714" visible="true" weight="0.28477904" />
       <window_info anchor="right" id="R Graphics" order="0" />
       <window_info anchor="right" id="R Packages" order="1" />
       <window_info anchor="right" id="SciView" order="2" />
@@ -545,13 +556,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="70" selection-start-line="70" selection-end-line="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SaanviDashboard/angular.json" />
     <entry file="file://$PROJECT_DIR$/SaanviDashboard/src/app/user-metrics/user-metrics.component.css" />
     <entry file="file://$PROJECT_DIR$/SaanviDashboard/src/app/user-metrics/user-metrics.component.spec.ts" />
@@ -667,13 +671,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bot/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://42fe0d88-4e6f-4ce5-b952-dde11b164844/database/sanvi/schema/dbo/table/bot_checkinstore">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -732,6 +729,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="45" column="15" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="40" column="64" lean-forward="true" selection-start-line="40" selection-start-column="64" selection-end-line="40" selection-end-column="64" />
         </state>
       </provider>
     </entry>
