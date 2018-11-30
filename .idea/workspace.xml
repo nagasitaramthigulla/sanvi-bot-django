@@ -8,10 +8,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0477967-eac6-4969-aafa-95e8a14ab4cc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/SaanviDashboard" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SaanviDashboard/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/SaanviDashboard/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SaanviDashboard/src/app/code.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SaanviDashboard/src/app/services/getdata.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SaanviDashboard/src/app/services/getdata.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/42fe0d88-4e6f-4ce5-b952-dde11b164844.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/42fe0d88-4e6f-4ce5-b952-dde11b164844.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/42fe0d88-4e6f-4ce5-b952-dde11b164844/storage_v2/_src_/database/sanvi.k1KCBg/schema/dbo.sYMBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/42fe0d88-4e6f-4ce5-b952-dde11b164844/storage_v2/_src_/database/sanvi.k1KCBg/schema/dbo.sYMBAA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sanvibot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sanvibot.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,22 +71,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sanvibot/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="163" column="22" lean-forward="true" selection-start-line="163" selection-start-column="22" selection-end-line="163" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bot/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="41" column="67" selection-start-line="41" selection-start-column="67" selection-end-line="41" selection-end-column="67" />
+            <state relative-caret-position="2771">
+              <caret line="163" column="22" selection-start-line="163" selection-start-column="22" selection-end-line="163" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bot/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="das://42fe0d88-4e6f-4ce5-b952-dde11b164844/database/sanvi/schema/dbo/table/bot_checkinstore">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
@@ -114,7 +116,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bot/intents_replies.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
+            <state relative-caret-position="2193">
               <caret line="135" column="99" selection-start-line="135" selection-start-column="99" selection-end-line="135" selection-end-column="99" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
@@ -124,21 +126,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SaanviDashboard/src/app/user-metrics/user-metrics.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-697">
-              <folding>
-                <element signature="e#0#50#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/push.bat">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -210,9 +201,9 @@
         <option value="$PROJECT_DIR$/SaanviDashboard/src/app/services/getdata.service.ts" />
         <option value="$PROJECT_DIR$/bot/views.py" />
         <option value="$PROJECT_DIR$/push.bat" />
-        <option value="$PROJECT_DIR$/bot/models.py" />
         <option value="$PROJECT_DIR$/bot/intents_replies.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/bot/models.py" />
       </list>
     </option>
   </component>
@@ -231,31 +222,13 @@
         <subPane>
           <expand>
             <path>
-              <item name="sanvibot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sanvibot" type="462c0819:PsiDirectoryNode" />
+              <item name="sanvi-bot-django" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sanvi-bot-django" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="sanvibot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sanvibot" type="462c0819:PsiDirectoryNode" />
+              <item name="sanvi-bot-django" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sanvi-bot-django" type="462c0819:PsiDirectoryNode" />
               <item name="bot" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sanvibot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sanvibot" type="462c0819:PsiDirectoryNode" />
-              <item name="SaanviDashboard" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sanvibot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sanvibot" type="462c0819:PsiDirectoryNode" />
-              <item name="SaanviDashboard" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sanvibot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sanvibot" type="462c0819:PsiDirectoryNode" />
-              <item name="SaanviDashboard" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -271,7 +244,7 @@
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
     <property name="ts.external.directory.path" value="D:\projects\bot\sanvibot\SaanviDashboard\node_modules\typescript\lib" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -301,8 +274,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Django server.Unnamed">
-    <configuration name="Unnamed" type="Python.DjangoServer" factoryName="Django server">
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Python.DjangoServer" factoryName="Django server" nameIsGenerated="true">
       <module name="sanvibot" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -310,31 +283,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="sanvibot.settings" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\Nagasitaram\Envs\myenv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="9000" />
-      <option name="host" value="" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="false" />
-      <option name="customRunCommand" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="sanvibot" type="Python.DjangoServer" factoryName="Django server">
-      <module name="sanvibot" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-        <env name="DJANGO_SETTINGS_MODULE" value="sanvibot.settings" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\Nagasitaram\Envs\myenv\Scripts\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\nthigull\.virtualenvs\botenv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -346,14 +295,10 @@
       <option name="browserUrl" value="" />
       <option name="runTestServer" value="false" />
       <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="true" />
-      <option name="customRunCommand" value="runsslserver" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Django server.Unnamed" />
-      <item itemvalue="Django server.sanvibot" />
-    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -368,11 +313,12 @@
       <workItem from="1543035317329" duration="233000" />
       <workItem from="1543036096250" duration="61487000" />
       <workItem from="1543281862955" duration="27700000" />
+      <workItem from="1543557525267" duration="1465000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89420000" />
+    <option name="totallyTimeSpent" value="90885000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -384,17 +330,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.1860817" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.1881663" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info id="Database" order="3" weight="0.20726173" />
+      <window_info id="Database" order="3" weight="0.20682302" />
       <window_info anchor="bottom" id="TypeScript" order="0" weight="0.3289689" />
       <window_info anchor="bottom" id="Database Console" order="1" weight="0.6628478" />
       <window_info anchor="bottom" id="Inspection Results" order="2" weight="0.3289689" />
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" weight="0.3289689" />
-      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.49924356" weight="0.36824876" />
+      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.49924356" weight="0.3672806" />
       <window_info anchor="bottom" id="Version Control" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5015129" side_tool="true" weight="0.32242227" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
@@ -404,8 +351,8 @@
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="13" weight="0.3289689" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="14" visible="true" weight="0.33387887" />
-      <window_info anchor="bottom" id="Run" order="15" sideWeight="0.49848714" weight="0.3764321" />
+      <window_info anchor="bottom" id="Python Console" order="14" visible="true" weight="0.3336945" />
+      <window_info anchor="bottom" id="Run" order="15" sideWeight="0.49848714" weight="0.37594798" />
       <window_info anchor="right" id="R Graphics" order="0" />
       <window_info anchor="right" id="R Packages" order="1" />
       <window_info anchor="right" id="SciView" order="2" />
@@ -500,23 +447,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/angular.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="56" column="14" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/angular.json" />
     <entry file="file://$PROJECT_DIR$/frontend/webpack.extra.js" />
     <entry file="file://$PROJECT_DIR$/frontend/webpack.server.extra.js" />
-    <entry file="file://$PROJECT_DIR$/frontend/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="53" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../qnaforum/qnaproject/settings.py">
+    <entry file="file://$PROJECT_DIR$/frontend/package.json" />
+    <entry file="file://$USER_HOME$/qnaforum/qnaproject/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2703">
           <caret line="160" column="22" selection-start-line="160" selection-start-column="22" selection-end-line="160" selection-end-column="22" />
@@ -534,50 +469,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/api.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/app.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/python_stubs/2041809726/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="5480" column="8" selection-start-line="5480" selection-start-column="8" selection-end-line="5480" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/api.service.ts" />
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/app.component.html" />
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/app.component.ts" />
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/app.module.ts" />
+    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/python_stubs/2041809726/builtins.py" />
     <entry file="file://C:/Program Files/Python36/Lib/datetime.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4015">
@@ -627,47 +523,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SaanviDashboard/angular.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1649" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SaanviDashboard/src/app/user-metrics/user-metrics.component.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SaanviDashboard/src/app/user-metrics/user-metrics.component.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-228">
-          <folding>
-            <element signature="e#0#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SaanviDashboard/src/app/services/getdata.service.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SaanviDashboard/src/app/code.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SaanviDashboard/src/app/services/getdata.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/SaanviDashboard/angular.json" />
+    <entry file="file://$PROJECT_DIR$/SaanviDashboard/src/app/user-metrics/user-metrics.component.css" />
+    <entry file="file://$PROJECT_DIR$/SaanviDashboard/src/app/user-metrics/user-metrics.component.spec.ts" />
+    <entry file="file://$PROJECT_DIR$/SaanviDashboard/src/app/services/getdata.service.spec.ts" />
+    <entry file="file://$PROJECT_DIR$/SaanviDashboard/src/app/code.html" />
+    <entry file="file://$PROJECT_DIR$/SaanviDashboard/src/app/services/getdata.service.ts" />
     <entry file="file://$PROJECT_DIR$/bot/messenger.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-355">
@@ -763,6 +624,7 @@
         <state relative-caret-position="-102" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SaanviDashboard/src/app/user-metrics/user-metrics.component.ts" />
     <entry file="file://$PROJECT_DIR$/bot/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -773,53 +635,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/sanvibot/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="163" column="22" lean-forward="true" selection-start-line="163" selection-start-column="22" selection-end-line="163" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/push.bat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/intents_replies.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="135" column="99" selection-start-line="135" selection-start-column="99" selection-end-line="135" selection-end-column="99" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SaanviDashboard/src/app/user-metrics/user-metrics.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-697">
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="41" column="67" selection-start-line="41" selection-start-column="67" selection-end-line="41" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://42fe0d88-4e6f-4ce5-b952-dde11b164844/database/sanvi/schema/dbo/table/bot_useractivity">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+        <state relative-caret-position="2771">
+          <caret line="163" column="22" selection-start-line="163" selection-start-column="22" selection-end-line="163" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -830,10 +649,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://42fe0d88-4e6f-4ce5-b952-dde11b164844/database/sanvi/schema/dbo/table/bot_useractivity">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/intents_replies.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2193">
+          <caret line="135" column="99" selection-start-line="135" selection-start-column="99" selection-end-line="135" selection-end-column="99" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/push.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="das://42fe0d88-4e6f-4ce5-b952-dde11b164844/database/sanvi/schema/dbo/table/bot_checkinstore">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
         </state>
       </provider>
     </entry>

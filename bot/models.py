@@ -10,7 +10,6 @@ class MessengerUser(models.Model):
     first_name = models.TextField(max_length=30)
     last_name = models.TextField(max_length=30)
     email = models.EmailField(max_length=100, null=True)
-    appid = models.CharField(max_length=25, null=True, db_index=True)
     context = models.TextField(default="{}")
 
 
