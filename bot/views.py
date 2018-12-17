@@ -21,7 +21,6 @@ from django.utils.decorators import method_decorator
 from threading import Thread
 from django.template.loader import render_to_string
 from .models import CheckinStore,UserActivity
-import dialogflow
 
 class FacebookRequest(View):
 
