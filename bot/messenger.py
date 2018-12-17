@@ -5,7 +5,8 @@ import wikipedia
 from word2number.w2n import word_to_num
 from bot.models import *
 from datetime import datetime
-from .intents_replies import intents,none_reply
+from .intents_replies import intents, none_reply
+from bot.dialogflow import get_response
 
 PAGE_ACCESS_TOKEN = "EAACwSutJ0Q8BAC42dpG0pfwrThBVFKzehsxLGNd7RsewBdA5TheMOZCfW6HtXQxrxaGPa8zdLHtZAvuWdLz7mvTRx926vf1ZB0uXcp2iz2O12NHVRdNlb1GsZANDJ2uBW88BqMVtCQxBwN4lY67jdPFh1Ce1PSdE4EhZAU9zE7mTOznA3psN5"
 
@@ -26,7 +27,7 @@ def get_user(fbid):
         pass
 
 
-def send_message(fbid, text,**kwargs):
+def send_message(fbid, text, **kwargs):
     post_message_url = 'https://graph.facebook.com/v2.6/me/messages?access_token=%s' % PAGE_ACCESS_TOKEN
     response_msg = json.dumps({"recipient": {"id": fbid}, "message": {"text": text}})
     status = requests.post(post_message_url, headers={"Content-Type": "application/json"}, data=response_msg)
@@ -34,7 +35,7 @@ def send_message(fbid, text,**kwargs):
     return
 
 
-def send_url(fbid, text, url,**kwargs):
+def send_url(fbid, text, url, **kwargs):
     post_message_url = 'https://graph.facebook.com/v2.6/me/messages?access_token=%s' % PAGE_ACCESS_TOKEN
     response_msg = json.dumps({
         'recipient': {
@@ -62,14 +63,14 @@ def send_url(fbid, text, url,**kwargs):
     return
 
 
-def quick_reply(fbid, text, options,**kwargs):
+def quick_reply(fbid, text, options, **kwargs):
     quick_replies = []
     for option in options:
         quick_replies.append({
-                    "content_type": "text",
-                    "title": option,
-                    "payload":"<POSTBACK_PAYLOAD>",
-                })
+            "content_type": "text",
+            "title": option,
+            "payload": "<POSTBACK_PAYLOAD>",
+        })
     post_message_url = 'https://graph.facebook.com/v2.6/me/messages?access_token=%s' % PAGE_ACCESS_TOKEN
     response_msg = json.dumps({
         'recipient': {
@@ -84,8 +85,8 @@ def quick_reply(fbid, text, options,**kwargs):
     return
 
 
+reply_types = {"send_message": send_message, "send_url": send_url, "quick_reply": quick_reply}
 
-reply_types = {"send_message": send_message,"send_url":send_url,"quick_reply":quick_reply}
 
 def process_message(fbid, message: str):
     pprint(fbid)
@@ -99,24 +100,19 @@ def process_message(fbid, message: str):
                   }))
 
     user = get_user(fbid)
-
-    intent_dict = nlpluisai.get_intent(message)
-    intent = intent_dict['topScoringIntent']['intent'] if intent_dict['topScoringIntent']['score'] > 0.5 else 'None'
-
     arguments = {'user': user, 'fbid': fbid}
-    builtin = dict()
 
-    for entity in intent_dict['entities']:
-        if 'builtin' in entity['type']:
-            type = entity['type'].split('.')[-1]
-            builtin[type] = builtin.get(type, {})
-            builtin[type][entity['entity']] = entity['resolution']['value']
-            continue
-        arguments[entity['type']] = entity['entity']
-
-    intent_reply = intents.get(intent, none_reply)
-    message_dict = intent_reply(**arguments)
-
-    reply_type = reply_types[message_dict.pop('type','send_message')]
-
-    reply_type(fbid,**message_dict)
+    result = get_response(user, message)
+    pprint(result)
+    intent = result['source']
+    if 'fulfillment' not in result or result['score'] <= 0.5:
+        intent = 'None'
+        result['score'] = 1
+    if intent in intents and result['score'] > 0.5:
+        arguments.update(result['parameters'])
+        intent_reply = intents.get(intent, none_reply)
+        message_dict = intent_reply(**arguments)
+        reply_type = reply_types[message_dict.pop('type', 'send_message')]
+        reply_type(fbid, **message_dict)
+    else:
+        send_message(fbid, text=result['fulfillment']['speech'])
