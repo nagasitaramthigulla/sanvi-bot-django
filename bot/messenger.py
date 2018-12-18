@@ -89,30 +89,33 @@ reply_types = {"send_message": send_message, "send_url": send_url, "quick_reply"
 
 
 def process_message(fbid, message: str):
-    # pprint(fbid)
-    requests.post("https://graph.facebook.com/v2.6/me/messages?access_token=" + PAGE_ACCESS_TOKEN,
-                  headers={"Content-Type": "application/json"},
-                  data=json.dumps({
-                      "recipient": {
-                          "id": fbid
-                      },
-                      "sender_action": "typing_on"
-                  }))
+    try:
+        # pprint(fbid)
+        requests.post("https://graph.facebook.com/v2.6/me/messages?access_token=" + PAGE_ACCESS_TOKEN,
+                      headers={"Content-Type": "application/json"},
+                      data=json.dumps({
+                          "recipient": {
+                              "id": fbid
+                          },
+                          "sender_action": "typing_on"
+                      }))
 
-    user = get_user(fbid)
-    arguments = {'user': user, 'fbid': fbid}
+        user = get_user(fbid)
+        arguments = {'user': user, 'fbid': fbid}
 
-    result = get_response(user, message)
-    # pprint(result)
-    intent = result['metadata'].get('intentName','default')
-    if 'fulfillment' not in result or result['score'] <= 0.5:
-        intent = 'None'
-        result['score'] = 1
-    if intent in intents and result['score'] > 0.5:
-        arguments.update(result['parameters'])
-        intent_reply = intents.get(intent, none_reply)
-        message_dict = intent_reply(**arguments)
-        reply_type = reply_types[message_dict.pop('type', 'send_message')]
-        reply_type(fbid, **message_dict)
-    else:
-        send_message(fbid, text=result['fulfillment']['speech'])
+        result = get_response(user, message)
+        # pprint(result)
+        intent = result['metadata'].get('intentName','default')
+        if 'fulfillment' not in result or result['score'] <= 0.5:
+            intent = 'None'
+            result['score'] = 1
+        if intent in intents and result['score'] > 0.5:
+            arguments.update(result['parameters'])
+            intent_reply = intents.get(intent, none_reply)
+            message_dict = intent_reply(**arguments)
+            reply_type = reply_types[message_dict.pop('type', 'send_message')]
+            reply_type(fbid, **message_dict)
+        else:
+            send_message(fbid, text=result['fulfillment']['speech'])
+    except Exception as ex:
+        send_message(fbid,text="can you say that again?")

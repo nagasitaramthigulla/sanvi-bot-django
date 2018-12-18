@@ -102,6 +102,8 @@ def productivity_reply(user: MessengerUser = None, **kwargs) -> dict:
             if activity != None:
                 activity.is_productive = status
                 activity.save()
+            else:
+                return {"type": "send_message", "text": "there is no activity called {pn}".format(pn=project_name)}
             return {"type": "send_message", "text": "updated {pn} to {status}".format(pn=project_name,
                                                                                       status="productive" if status else "unproductive")}
     except Exception as ex:
