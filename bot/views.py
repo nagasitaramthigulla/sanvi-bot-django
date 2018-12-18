@@ -103,3 +103,5 @@ class UserStats(ListAPIView):
             d[id]['list'].append(t)
         return Response(d.values())
     pass
+
+
