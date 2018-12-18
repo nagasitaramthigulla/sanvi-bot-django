@@ -1,6 +1,13 @@
 branch-defaults:
   master:
     environment: sanvi
+  ram:
+    environment: sanvi
+    group_suffix: null
+environment-defaults:
+  sanvi:
+    branch: null
+    repository: null
 global:
   application_name: chatbot
   branch: null
