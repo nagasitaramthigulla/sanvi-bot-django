@@ -1,26 +1,20 @@
-from django.contrib.auth.decorators import login_required
-from django.shortcuts import render
-
 from pprint import pprint
 
-from rest_framework.decorators import api_view
-from rest_framework.response import Response
-from rest_framework.generics import ListAPIView
-from rest_framework import serializers
-
-from django.shortcuts import render
-
+from threading import Thread
+import json
+from django.http import HttpRequest
+from django.http import HttpResponse
+from django.utils.decorators import method_decorator
 # Create your views here.
 from django.views import View
-from django.http import HttpResponse
-from django.http import HttpRequest
-from bot import messenger
-import json
 from django.views.decorators.csrf import csrf_exempt
-from django.utils.decorators import method_decorator
-from threading import Thread
-from django.template.loader import render_to_string
-from .models import CheckinStore,UserActivity
+from rest_framework import serializers
+from rest_framework.generics import ListAPIView
+from rest_framework.response import Response
+
+from bot import messenger
+from .models import CheckinStore, UserActivity
+
 
 class FacebookRequest(View):
 
@@ -47,13 +41,6 @@ class FacebookRequest(View):
                     t = Thread(target=messenger.process_message, args=arguments)
                     t.start()
         return HttpResponse()
-
-
-@login_required
-def home(request):
-    response = render(request, 'core/home.html')
-    response.set_cookie(key="fbid", value=request.user.social_auth.get(provider='facebook').uid)
-    return response
 
 
 class ActivitySerializer(serializers.ModelSerializer):
