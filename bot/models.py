@@ -41,6 +41,7 @@ class CheckinStore(models.Model):
         import pytz
         if self.check_out_time == None:
             self.check_out_time = pytz.timezone("Asia/Kolkata").localize(datetime.now())
+        self.check_in_time.replace(tzinfo=None)
         time_diff: timedelta = self.check_out_time - self.check_in_time
         self.total_time = round(time_diff.total_seconds() / 3600, 3)
         super(CheckinStore, self).save(*args, **kwargs)
