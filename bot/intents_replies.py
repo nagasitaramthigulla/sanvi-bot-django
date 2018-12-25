@@ -118,15 +118,12 @@ def checkout_reply(user: MessengerUser = None, **kwargs) -> dict:
         else:
             if Checkin.objects.filter(activity__uid=user.id).count() != 0:
                 checkin = Checkin.objects.get(activity__uid=user)
-                if "projectname" in kwargs and checkin.checked_into != kwargs["projectname"]:
-                    reply = "you have not checked into {a} but into {b}".format(a=kwargs["projectname"],
-                                                                                b=checkin.checked_into)
-                else:
-                    reply = "checking you out of {}".format(checkin.activity.activity_name)
-                    checkin_store = CheckinStore.objects.create(check_in_time=checkin.check_in_time,
-                                                                activity=checkin.activity)
-                    checkin_store.save()
-                    checkin.delete()
+
+                reply = "checking you out of {}".format(checkin.activity.activity_name)
+                checkin_store = CheckinStore.objects.create(check_in_time=checkin.check_in_time,
+                                                            activity=checkin.activity)
+                checkin_store.save()
+                checkin.delete()
             else:
                 reply = "you have not checked into anything"
     except Exception as ex:
