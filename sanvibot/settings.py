@@ -93,7 +93,7 @@ DATABASES = {
         'HOST': 'nagasitaram.database.windows.net',
         'PASSWORD': 'Qwer1234',
         'USER': 'nagasitaram@nagasitaram',
-        'PORT':'1433',
+        'PORT': '1433',
         'OPTIONS': {
             'driver': 'ODBC Driver 13 for SQL Server',
         }
@@ -129,6 +129,8 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'Asia/Kolkata'
+
+USE_TZ = True
 
 USE_I18N = True
 
