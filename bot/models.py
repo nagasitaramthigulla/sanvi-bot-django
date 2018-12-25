@@ -24,11 +24,12 @@ class UserActivity(models.Model):
 
 class Checkin(models.Model):
     activity = models.OneToOneField(UserActivity, on_delete=models.CASCADE, primary_key=True)
-    check_in_time = models.DateTimeField(auto_now_add=True)
+    check_in_time = models.DateTimeField()
 
     def save(self,*args,**kwargs):
         import pytz
         self.check_in_time = pytz.timezone("Asia/Kolkata").localize(datetime.now())
+        super(Checkin, self).save(*args, **kwargs)
 
 class CheckinStore(models.Model):
     activity = models.ForeignKey(UserActivity, on_delete=models.CASCADE)
