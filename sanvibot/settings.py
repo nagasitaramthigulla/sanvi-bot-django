@@ -26,10 +26,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-SOCIAL_AUTH_FACEBOOK_KEY: str = '193835821551887'
-
-SOCIAL_AUTH_FACEBOOK_SECRET: str = 'ba064e3fd727a725f81bb291ba2b0f81'
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -40,8 +36,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bot',
-    'social_django',
-    "sslserver",
     'corsheaders',
     "rest_framework",
 ]
@@ -55,8 +49,6 @@ REST_FRAMEWORK = {
 
 CORS_ORIGIN_ALLOW_ALL = True
 
-ANGULAR_APP_DIR = os.path.join(BASE_DIR, 'frontend/dist')
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -66,7 +58,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
-    'social_django.middleware.SocialAuthExceptionMiddleware',  # <--
 ]
 
 ROOT_URLCONF = 'sanvibot.urls'
@@ -84,9 +75,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-
-                'social_django.context_processors.backends',  # <--
-                'social_django.context_processors.login_redirect',  # <--
             ],
         },
     },
@@ -98,10 +86,7 @@ WSGI_APPLICATION = 'sanvibot.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    # }
+    # sql database connection to azure sql server
     'default': {
         'ENGINE': 'sql_server.pyodbc',
         'NAME': 'sanvi',
@@ -119,9 +104,6 @@ DATABASES = {
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
 
 AUTHENTICATION_BACKENDS = (
-    'social_core.backends.github.GithubOAuth2',
-    'social_core.backends.twitter.TwitterOAuth',
-    'social_core.backends.facebook.FacebookOAuth2',
 
     'django.contrib.auth.backends.ModelBackend',
 )
@@ -152,22 +134,5 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.0/howto/static-files/
-SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
-    'locale': 'en_US',
-    'fields': 'id, name, email, age_range'
-}
-
-# STATICFILES_DIRS = [
-#         os.path.join(ANGULAR_APP_DIR),
-#     ]
-
 STATIC_URL = '/static/'
 STATIC_ROOT = 'static'
-
-LOGIN_URL = 'login'
-LOGOUT_URL = 'logout'
-LOGIN_REDIRECT_URL = 'home'
