@@ -64,6 +64,6 @@ Unidecode==1.0.23
 urllib3==1.22
 wcwidth==0.1.7
 webencodings==0.5.1
-wiki==0.4.2
+wiki==0.7.9
 wikipedia==1.4.0
 word2number==1.1
